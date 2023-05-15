@@ -15,5 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: echo "disabled"
-#      run: docker build . --file Dockerfile.Stable --tag custome-auto1111:$(date +%s)
+      working-directory: sd-auto-unified
+#      run: echo "disabled"
+      run: docker build . --file Dockerfile --tag custome-auto1111:$(date +%s)
+  

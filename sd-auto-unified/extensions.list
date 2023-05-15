@@ -10,4 +10,4 @@ RUN git clone https://github.com/jexom/sd-webui-depth-lib /content/stable-diffus
 RUN git clone https://github.com/hnmr293/posex /content/stable-diffusion-webui/extensions/posex
 RUN git clone https://github.com/camenduru/sd-webui-tunnels /content/stable-diffusion-webui/extensions/sd-webui-tunnels
 RUN git clone https://github.com/etherealxx/batchlinks-webui /content/stable-diffusion-webui/extensions/batchlinks-webui
-RUN git clone https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git /content/stable-diffusion-webui/extensions/batchlinks-webui
+RUN git clone https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git /content/stable-diffusion-webui/extensions/sd-web-ui-kitchen-theme

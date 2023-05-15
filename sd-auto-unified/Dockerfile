@@ -13,10 +13,10 @@ RUN apt update && apt install -y --no-install-recommends aria2
 
 WORKDIR /workspace/stable-diffusion-webui
 
-ADD model.list 
-ADD lora.list
-ADD textualinversion.list
-ADD downloader.sh
+ADD model.list /workspace/
+ADD lora.list /workspace/
+ADD textualinversion.list /workspace/
+ADD downloader.sh /workspace/
 RUN chmod a+x downloader.sh
 RUN downloader.sh
 

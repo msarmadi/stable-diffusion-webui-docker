@@ -1,5 +1,5 @@
-FROM runpod/stable-diffusion:models-1.0.0 AS sd-models
-#FROM runpod/stable-diffusion-models:2.1 AS hf-cache
+#FROM runpod/stable-diffusion:models-1.0.0 AS sd-models
+FROM runpod/stable-diffusion-models:2.1 AS hf-cache
 
 FROM runpod/stable-diffusion:web-automatic-base-6.0.1 AS runtime
 

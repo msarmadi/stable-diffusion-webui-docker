@@ -43,4 +43,8 @@ then
     echo "Jupyter Lab Started"
 fi
 
+# run downloader.sh to download the models, lora's and textualinversions
+cd /workspace
+bash ./downloader.sh
+
 sleep infinity

@@ -17,7 +17,7 @@ ADD model.list /workspace/
 ADD lora.list /workspace/
 ADD textualinversion.list /workspace/
 ADD downloader.sh /workspace/
-RUN chmod a+x downloader.sh
+#RUN chmod a+x downloader.sh
 #RUN downloader.sh
 
 # Extensions

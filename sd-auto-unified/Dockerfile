@@ -1,13 +1,13 @@
 FROM runpod/stable-diffusion:models-1.0.0 AS sd-models
-FROM runpod/stable-diffusion-models:2.1 AS hf-cache
+#FROM runpod/stable-diffusion-models:2.1 AS hf-cache
 
 FROM runpod/stable-diffusion:web-automatic-base-6.0.1 AS runtime
 
 RUN mkdir -p /root/.cache/huggingface && mkdir -p /sd-models
 
 COPY --from=hf-cache /root/.cache/huggingface /root/.cache/huggingface
-COPY --from=sd-models /SDv1-5.ckpt /sd-models/SDv1-5.ckpt
-COPY --from=sd-models /SDv2-768.ckpt /sd-models/SDv2-768.ckpt
+#COPY --from=sd-models /SDv1-5.ckpt /sd-models/SDv1-5.ckpt
+#COPY --from=sd-models /SDv2-768.ckpt /sd-models/SDv2-768.ckpt
 
 RUN apt update && apt install -y --no-install-recommends aria2
 

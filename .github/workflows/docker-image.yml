@@ -1,8 +1,20 @@
 name: Docker Image CI
 
 on:
-  push:
+  # push:
+  #   branches: [ "main" ]
+  workflow_dispatch:
     branches: [ "main" ]
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
   pull_request:
     branches: [ "main" ]
 
@@ -14,7 +26,11 @@ jobs:
 
     steps:
     - name: Delete huge unnecessary tools folder
-      run: df -h ; rm -rf /opt/hostedtoolcache ; df -h
+      run: | 
+        df -h |grep /dev/root
+        du -shc /*
+        rm -rf /opt/hostedtoolcache
+        df -h| grep /dev/root
 
     - uses: actions/checkout@v3
     - name: Build the Docker image

@@ -28,7 +28,7 @@ jobs:
     - name: Delete huge unnecessary tools folder
       run: | 
         df -h |grep /dev/root
-        du -shc /*
+        sudo du -shc /* 2> /dev/null
         rm -rf /opt/hostedtoolcache
         df -h| grep /dev/root
 

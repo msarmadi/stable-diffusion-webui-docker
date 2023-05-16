@@ -1,11 +1,11 @@
 #FROM runpod/stable-diffusion:models-1.0.0 AS sd-models
-FROM runpod/stable-diffusion-models:2.1 AS hf-cache
+#FROM runpod/stable-diffusion-models:2.1 AS hf-cache
 
 FROM runpod/stable-diffusion:web-automatic-base-6.0.1 AS runtime
 
 RUN mkdir -p /root/.cache/huggingface && mkdir -p /sd-models
 
-COPY --from=hf-cache /root/.cache/huggingface /root/.cache/huggingface
+#COPY --from=hf-cache /root/.cache/huggingface /root/.cache/huggingface
 #COPY --from=sd-models /SDv1-5.ckpt /sd-models/SDv1-5.ckpt
 #COPY --from=sd-models /SDv2-768.ckpt /sd-models/SDv2-768.ckpt
 
@@ -23,7 +23,7 @@ RUN chmod a+x downloader.sh
 # Extensions
 RUN git clone https://github.com/deforum-art/deforum-for-automatic1111-webui /workspace/stable-diffusion-webui/extensions/deforum-for-automatic1111-webui
 RUN git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
-RUN git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface
+#RUN git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface
 RUN git clone -b v2.0 https://github.com/camenduru/sd-civitai-browser /workspace/stable-diffusion-webui/extensions/sd-civitai-browser
 #RUN git clone https://github.com/Vetchems/sd-civitai-browser
 RUN git clone https://github.com/kohya-ss/sd-webui-additional-networks /workspace/stable-diffusion-webui/extensions/sd-webui-additional-networks

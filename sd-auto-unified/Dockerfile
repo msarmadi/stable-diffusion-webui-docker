@@ -21,7 +21,7 @@ ADD downloader.sh /workspace/
 #RUN downloader.sh
 
 # Extensions
-RUN df -h ; sudo du -shc /* 2>/dev/null  | sort -h  | grep G
+RUN df -h ; sudo du -shc /* 2>/dev/null  | sort -h  | grep G || true
 RUN git clone https://github.com/deforum-art/sd-webui-deforum.git /workspace/stable-diffusion-webui/extensions/deforum-for-automatic1111-webui
 RUN git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser.git /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
 #RUN git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface
@@ -36,7 +36,7 @@ RUN git clone https://github.com/camenduru/sd-webui-tunnels.git /workspace/stabl
 RUN git clone https://github.com/etherealxx/batchlinks-webui.git /workspace/stable-diffusion-webui/extensions/batchlinks-webui
 RUN git clone https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git /workspace/stable-diffusion-webui/extensions/sd-web-ui-kitchen-theme
 
-RUN df -h ; sudo du -shc /* 2>/dev/null  | sort -h  | grep G
+RUN df -h ; sudo du -shc /* 2>/dev/null  | sort -h  | grep G || true
 RUN python -m venv /workspace/venv
 ENV PATH="/workspace/venv/bin:$PATH"
 

@@ -66,7 +66,7 @@ jobs:
       - name: Delete huge unnecessary tools folder
         run: | 
           df -h |grep /dev/root
-          sudo du -shc /* 2> /dev/null | sort -h  | grep G
+          sudo du -shc /* 2> /dev/null | sort -h  | grep G || true
           rm -rf /opt/hostedtoolcache
           df -h| grep /dev/root
           echo "Listing 100 largest packages"

@@ -1,0 +1,52 @@
+name: Docker Image CI
+
+on:
+  # push:
+  #   branches: [ "main" ]
+  workflow_dispatch:
+    branches: [ "main" ]
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Maximize build space
+        uses: msarmadi/maximize-build-space-forauto1111@master
+        with:
+          root-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+          remove-codeql: 'true'
+          remove-docker-images: 'true'
+      - name: Delete huge unnecessary tools folder
+        run: | 
+          df -h |grep /dev/root
+          # sudo du -shc /* 2> /dev/null
+          rm -rf /opt/hostedtoolcache
+          df -h| grep /dev/root
+
+      - uses: actions/checkout@v3
+      - name: Build the Docker image
+        env:
+          LEVEL: ${{ inputs.logLevel }}
+  #      run: echo "disabled"
+        run: docker build . --file Dockerfile.nginx --tag msarmadi/custome-auto1111:$(date +%s)
+      - name: Docker Push
+        run: docker push msarmadi/custome-auto1111

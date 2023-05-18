@@ -27,7 +27,7 @@ RUN apt-get install -y nginx
 RUN rm -v /etc/nginx/nginx.conf
 
 # Copy a configuration file from the current directory
-ADD nginx.conf /etc/nginx/
+# ADD nginx.conf /etc/nginx/
 
 RUN mkdir /etc/nginx/logs
 
@@ -38,7 +38,8 @@ ADD index.html /www/data/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # Create a runner script for the entrypoint
-COPY runner.sh /runner.sh
+RUN echo "#!/bin/bash" >> /runner.sh
+RUN echo "echo 'dummy runner'" >> /runner.sh
 RUN chmod +x /runner.sh
 
 # Expose ports

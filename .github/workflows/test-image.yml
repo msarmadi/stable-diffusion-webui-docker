@@ -49,7 +49,8 @@ jobs:
   #      run: echo "disabled"
         run: |
           TSTAMP="$(date +%s)"
-          docker build . --file Dockerfile.nginx --tag custome-auto1111:$TSTAMP
+          docker build . --file Dockerfile.nginx --tag msarmadi/custome-auto1111:$TSTAMP
+          # docker tag custome-auto1111 msarmadi/custome-auto1111
           docker push msarmadi/custome-auto1111:$TSTAMP
           # docker tag custome-auto1111 msarmadi/custome-auto1111
           # docker inspect 

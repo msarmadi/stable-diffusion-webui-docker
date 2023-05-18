@@ -25,7 +25,7 @@ jobs:
     steps:
       # Check out code
       - name: Maximize build space
-        uses: easimon/maximize-build-space@master
+        uses: msarmadi/maximize-build-space-forauto1111@master
         with:
           root-reserve-mb: 512
           swap-size-mb: 1024

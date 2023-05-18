@@ -63,10 +63,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       # And make it available for builds
-      - name: Delete huge unnecessary tools folder
+      - name: Delete huge unnecessary tools folder and packages
         run: | 
           df -h |grep /dev/root
-          sudo du -shc /* 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /usr 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /mnt 2> /dev/null | sort -h  | grep G || true
           rm -rf /opt/hostedtoolcache
           df -h| grep /dev/root
           echo "Listing 100 largest packages"
@@ -84,23 +85,25 @@ jobs:
           echo "Removing large directories"
           # deleting 15GB
           rm -rf /usr/share/dotnet/
+          sudo du -shc /usr 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /mnt 2> /dev/null | sort -h  | grep G || true
           df -h
 
-      - name: Build and push
-        uses: docker/build-push-action@v2
+      # - name: Build and push
+      #   uses: docker/build-push-action@v2
         
-        with:
-          context: sd-auto-unified
-          push: true
-          tags: msarmadi/sd-auto-unified:latest
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache-new
-        # This ugly bit is necessary if you don't want your cache to grow forever
-        # until it hits GitHub's limit of 5GB.
-        # Temp fix
-        # https://github.com/docker/build-push-action/issues/252
-        # https://github.com/moby/buildkit/issues/1896
-      - name: Move cache
-        run: |
-          rm -rf /tmp/.buildx-cache
-          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+      #   with:
+      #     context: sd-auto-unified
+      #     push: true
+      #     tags: msarmadi/sd-auto-unified:latest
+      #     cache-from: type=local,src=/tmp/.buildx-cache
+      #     cache-to: type=local,dest=/tmp/.buildx-cache-new
+      #   # This ugly bit is necessary if you don't want your cache to grow forever
+      #   # until it hits GitHub's limit of 5GB.
+      #   # Temp fix
+      #   # https://github.com/docker/build-push-action/issues/252
+      #   # https://github.com/moby/buildkit/issues/1896
+      # - name: Move cache
+      #   run: |
+      #     rm -rf /tmp/.buildx-cache
+      #     mv /tmp/.buildx-cache-new /tmp/.buildx-cache

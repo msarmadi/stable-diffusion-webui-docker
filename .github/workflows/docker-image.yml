@@ -76,28 +76,28 @@ jobs:
       - name: Delete huge unnecessary tools folder and packages
         run: | 
           df -h |grep /dev/root
-          # sudo du -shc /usr/* 2> /dev/null | sort -h  | grep G || true
-          # sudo du -shc /mnt/* 2> /dev/null | sort -h  | grep G || true
-          # rm -rf /opt/hostedtoolcache
-          # df -h| grep /dev/root
-          # echo "Listing 100 largest packages"
-          # dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n 100
-          # df -h
-          # echo "Removing large packages"
-          # sudo apt-get remove -y '^ghc-8.*' || true
-          # sudo apt-get remove -y '^dotnet-.*' || true
-          # sudo apt-get remove -y '^llvm-.*' || true
-          # sudo apt-get remove -y 'php.*' || true
-          # sudo apt-get remove -y azure-cli google-cloud-sdk hhvm google-chrome-stable firefox powershell mono-devel || true
-          # sudo apt-get autoremove -y
-          # sudo apt-get clean
-          # df -h
-          # echo "Removing large directories"
-          # # deleting 15GB
-          # rm -rf /usr/share/dotnet/
-          # sudo du -shc /usr/* 2> /dev/null | sort -h  | grep G || true
-          # sudo du -shc /mnt/* 2> /dev/null | sort -h  | grep G || true
-          # df -h
+          sudo du -shc /usr/* 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /mnt/* 2> /dev/null | sort -h  | grep G || true
+          rm -rf /opt/hostedtoolcache
+          df -h| grep /dev/root
+          echo "Listing 100 largest packages"
+          dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n 100
+          df -h
+          echo "Removing large packages"
+          sudo apt-get remove -y '^ghc-8.*' || true
+          sudo apt-get remove -y '^dotnet-.*' || true
+          sudo apt-get remove -y '^llvm-.*' || true
+          sudo apt-get remove -y 'php.*' || true
+          sudo apt-get remove -y azure-cli google-cloud-sdk hhvm google-chrome-stable firefox powershell mono-devel || true
+          sudo apt-get autoremove -y
+          sudo apt-get clean
+          df -h
+          echo "Removing large directories"
+          # deleting 15GB
+          rm -rf /usr/share/dotnet/
+          sudo du -shc /usr/* 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /mnt/* 2> /dev/null | sort -h  | grep G || true
+          df -h
 
       # - name: Build and push
       #   uses: docker/build-push-action@v2

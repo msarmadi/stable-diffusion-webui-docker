@@ -47,6 +47,10 @@ jobs:
         env:
           LEVEL: ${{ inputs.logLevel }}
   #      run: echo "disabled"
-        run: docker build . --file Dockerfile.nginx --tag msarmadi/custome-auto1111:$(date +%s)
+        run: |
+          docker build . --file Dockerfile.nginx --tag custome-auto1111:$(date +%s)
+          docker tag custome-auto1111 msarmadi/custome-auto1111
+          # docker inspect 
+        
       - name: Docker Push
         run: docker push msarmadi/custome-auto1111

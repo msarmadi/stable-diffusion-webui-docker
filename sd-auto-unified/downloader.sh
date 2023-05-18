@@ -1,7 +1,7 @@
 #!/bin/bash
 BASE_DIR=/workspace
 MODEL_DIR=${BASE_DIR}/stable-diffusion-webui/models/Stable-diffusion
-LORA_DIR=${BASE_DIR}/stable-diffusion-webui/Lora
+LORA_DIR=${BASE_DIR}/stable-diffusion-webui/models/Lora
 TI_DIR=${BASE_DIR}/stable-diffusion-webui/embeddings
 
 # TI

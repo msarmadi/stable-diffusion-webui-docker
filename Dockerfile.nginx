@@ -29,10 +29,10 @@ RUN rm -v /etc/nginx/nginx.conf
 RUN mkdir /etc/nginx/logs
 
 # Add a sample index file
-ADD index.html /www/data/
+RUN echo "this is index" /www/data/index.html
 
 # Append "daemon off;" to the beginning of the configuration
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+RUN echo "daemon off" >> /etc/nginx/nginx.conf
 
 # Create a runner script for the entrypoint
 RUN echo "#!/bin/bash" >> /runner.sh

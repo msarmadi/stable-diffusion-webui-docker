@@ -50,4 +50,4 @@ jobs:
   #      run: echo "disabled"
         run: docker build . --file Dockerfile --tag custome-auto1111:$(date +%s)
       - name: Docker Push
-        run: docker push chamodshehanka/node-test
+        run: docker push msarmadi/custome-auto1111

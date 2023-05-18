@@ -66,8 +66,8 @@ jobs:
       - name: Delete huge unnecessary tools folder and packages
         run: | 
           df -h |grep /dev/root
-          sudo du -shc /usr 2> /dev/null | sort -h  | grep G || true
-          sudo du -shc /mnt 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /usr/* 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /mnt/* 2> /dev/null | sort -h  | grep G || true
           rm -rf /opt/hostedtoolcache
           df -h| grep /dev/root
           echo "Listing 100 largest packages"
@@ -85,8 +85,8 @@ jobs:
           echo "Removing large directories"
           # deleting 15GB
           rm -rf /usr/share/dotnet/
-          sudo du -shc /usr 2> /dev/null | sort -h  | grep G || true
-          sudo du -shc /mnt 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /usr/* 2> /dev/null | sort -h  | grep G || true
+          sudo du -shc /mnt/* 2> /dev/null | sort -h  | grep G || true
           df -h
 
       # - name: Build and push

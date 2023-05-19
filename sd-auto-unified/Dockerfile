@@ -37,7 +37,7 @@ RUN git clone https://github.com/etherealxx/batchlinks-webui.git /workspace/stab
 RUN git clone https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git /workspace/stable-diffusion-webui/extensions/sd-web-ui-kitchen-theme
 
 # RUN df -h ; sudo du -shc /* 2>/dev/null  | sort -h  | grep G || true
-RUN bash /workspace/downloader-lora.sh
+# RUN bash /workspace/downloader-lora.sh
 RUN bash /workspace/downloader-pt.sh
 RUN python -m venv /workspace/venv
 ENV PATH="/workspace/venv/bin:$PATH"

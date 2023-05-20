@@ -46,3 +46,4 @@ GoodHands-beta1.safetensors https://civitai.com/api/download/models/54283?type=M
 nijiMecha.safetensors https://civitai.com/api/download/models/70067?type=Model&format=SafeTensor
 OC.safetensors https://civitai.com/api/download/models/47871?type=Model&format=SafeTensor
 fashigirl-v5.5-lora-naivae-64dim.safetensors https://civitai.com/api/download/models/67935?type=Model&format=SafeTensor
+ganyu_ned2_offset.safetensors https://huggingface.co/Lykon/LoRA/resolve/main/ganyu_ned2_offset.safetensors

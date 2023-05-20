@@ -61,3 +61,4 @@ hoppagames.pt https://civitai.com/api/download/models/21851?type=Model&format=Pi
 prt.pt https://civitai.com/api/download/models/8989?type=Model&format=PickleTensor&size=full&fp=fp16
 realisticvision-negative-embedding https://civitai.com/api/download/models/42247?type=Model&format=Other
 ByBadartist-neg.pt https://civitai.com/api/download/models/6056?type=Negative&format=Other
+AS-Adult-neg.pt https://civitai.com/api/download/models/74332?type=Negative&format=Other

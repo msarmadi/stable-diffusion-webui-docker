@@ -9,7 +9,7 @@ RUN mkdir -p /root/.cache/huggingface && mkdir -p /sd-models
 #COPY --from=sd-models /SDv1-5.ckpt /sd-models/SDv1-5.ckpt
 #COPY --from=sd-models /SDv2-768.ckpt /sd-models/SDv2-768.ckpt
 
-RUN apt update && apt install -y --no-install-recommends aria2
+RUN apt update && apt install -y --no-install-recommends aria2 libcairo2-dev pkg-config python3-dev libgl1 libglib2.0-0 wget git git-lfs python3-pip python-is-python3
 
 WORKDIR /workspace/stable-diffusion-webui
 

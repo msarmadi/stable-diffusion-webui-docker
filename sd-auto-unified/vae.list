@@ -1,0 +1,3 @@
+vae-ft-mse-840000-ema-pruned.ckpt https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt
+vae-ft-ema-560000-ema-pruned.ckpt https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-560000-ema-pruned.ckpt
+Anything-V3.0.vae.pt https://civitai.com/api/download/models/75?type=VAE&format=Other

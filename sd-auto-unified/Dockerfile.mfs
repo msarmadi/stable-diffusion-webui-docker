@@ -22,10 +22,10 @@ ADD downloader*.sh /workspace/
 
 # Extensions
 # RUN df -h ; sudo du -shc /* 2>/dev/null  | sort -h  | grep G || true
-# RUN git clone https://github.com/deforum-art/sd-webui-deforum.git /workspace/stable-diffusion-webui/extensions/deforum-for-automatic1111-webui
-# RUN git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser.git /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
+# RUN git pull /workspace/stable-diffusion-webui/extensions/deforum-for-automatic1111-webui
+# RUN git pull /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser
 # #RUN git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /workspace/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface
-# RUN git clone -b v2.0 https://github.com/camenduru/sd-civitai-browser.git /workspace/stable-diffusion-webui/extensions/sd-civitai-browser
+# RUN pull https://github.com/camenduru/sd-civitai-browser.git /workspace/stable-diffusion-webui/extensions/sd-civitai-browser
 # #RUN git clone https://github.com/Vetchems/sd-civitai-browser
 # RUN git clone https://github.com/kohya-ss/sd-webui-additional-networks.git /workspace/stable-diffusion-webui/extensions/sd-webui-additional-networks
 # RUN git clone https://github.com/Mikubill/sd-webui-controlnet.git /workspace/stable-diffusion-webui/extensions/sd-webui-controlnet

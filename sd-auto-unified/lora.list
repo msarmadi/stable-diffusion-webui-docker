@@ -51,6 +51,8 @@ LowRA.safetensors https://civitai.com/api/download/models/63006?type=Model&forma
 GPTS4\ dreamwave\ full_478773.safetensors https://civitai.com/api/download/models/71264?type=Model&format=SafeTensor
 gpts4\ lite\ dreamwave_278580.safetensors https://civitai.com/api/download/models/66840?type=Model&format=SafeTensor
 zhongfenghuaxiyou-000018.1.safetensors https://civitai.com/api/download/models/56525?type=Model&format=SafeTensor
-
+animeoutlineV4_16.safetensors https://civitai.com/api/download/models/28907?type=Model&format=SafeTensor&size=full&fp=fp16
+thickline_fp16.safetensors https://civitai.com/api/download/models/16368?type=Model&format=SafeTensor&size=full&fp=fp16
+tachi-e.safetensors https://civitai.com/api/download/models/20072?type=Model&format=SafeTensor&size=full&fp=fp16
 
 

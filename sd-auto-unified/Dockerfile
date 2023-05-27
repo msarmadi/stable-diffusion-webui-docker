@@ -49,7 +49,7 @@ ENV PATH="/workspace/venv/bin:$PATH"
 RUN mv /workspace/stable-diffusion-webui /stable-diffusion-webui
 RUN mv /workspace/venv /venv
 
-RUN source /workspace/venv/bin/activate
+# RUN source /workspace/venv/bin/activate
 RUN pip install -U jupyterlab ipywidgets jupyter-archive gdown rich pycloudflared jupyter_lsp numexpr
 RUN jupyter nbextension enable --py widgetsnbextension
 

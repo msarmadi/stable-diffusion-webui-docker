@@ -84,7 +84,7 @@ jobs:
         
         with:
           context: sd-auto-unified
-          file: Dockerfile.mfs
+          file: sd-auto-unified/Dockerfile.mfs
           push: true
           tags: msarmadi/sd-auto-unified-light:latest
           cache-from: type=local,src=/tmp/.buildx-cache

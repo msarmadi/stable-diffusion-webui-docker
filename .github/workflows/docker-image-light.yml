@@ -85,7 +85,7 @@ jobs:
         with:
           context: sd-auto-unified
           push: true
-          tags: msarmadi/sd-auto-unified:latest
+          tags: msarmadi/sd-auto-unified-light:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
         # This ugly bit is necessary if you don't want your cache to grow forever

@@ -1,5 +1,5 @@
 coloring-book-style.pt https://civitai.com/api/download/models/53633?type=Model&format=PickleTensor
-coloring.pt https://civitai.com/api/download/models/31083?type=Model&format=PickleTensor
+coloring.safetensors https://civitai.com/api/download/models/9208?type=Model&format=SafeTensor&size=full&fp=fp16
 quimbystyle.pt https://civitai.com/api/download/models/34065?type=Model&format=PickleTensor&size=full&fp=fp16
 kc16-4000-sd1-5.pt https://civitai.com/api/download/models/28457?type=Model&format=PickleTensor&size=full&fp=fp16
 PlanIt.pt https://civitai.com/api/download/models/5469?type=Model&format=PickleTensor&size=full&fp=fp16
@@ -34,7 +34,7 @@ wholesomegrandpas.pt https://civitai.com/api/download/models/9189?type=Model&for
 21charturnerv2.pt https://civitai.com/api/download/models/9857?type=Model&format=PickleTensor&size=full&fp=fp16
 style-empire.pt https://civitai.com/api/download/models/2179?type=Model&format=PickleTensor&size=full&fp=fp16
 style-empire-neg.pt https://civitai.com/api/download/models/2179?type=Negative&format=Other
-easynegative.pt https://civitai.com/api/download/models/9208?type=Model&format=SafeTensor&size=full&fp=fp16
+easynegative.safetensors https://civitai.com/api/download/models/9208?type=Model&format=SafeTensor&size=full&fp=fp16
 ng_deepnegative_v1_75t.pt https://civitai.com/api/download/models/5637?type=Model&format=PickleTensor&size=full&fp=fp16
 ulzzang-6500-v1.1.pt https://civitai.com/api/download/models/10107?type=Model&format=Other&size=full&fp=fp16
 verybadimagenegative_v1.3.pt https://civitai.com/api/download/models/25820?type=Model&format=PickleTensor&size=full&fp=fp16

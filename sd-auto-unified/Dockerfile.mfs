@@ -3,7 +3,7 @@
 
 FROM runpod/stable-diffusion:web-automatic-base-6.0.1 AS runtime
 
-RUN mkdir -p /root/.cache/huggingface && mkdir -p /sd-models
+# RUN mkdir -p /root/.cache/huggingface && mkdir -p /sd-models
 
 #COPY --from=hf-cache /root/.cache/huggingface /root/.cache/huggingface
 #COPY --from=sd-models /SDv1-5.ckpt /sd-models/SDv1-5.ckpt

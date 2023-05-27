@@ -35,6 +35,10 @@ RUN git clone https://github.com/hnmr293/posex.git /workspace/stable-diffusion-w
 RUN git clone https://github.com/camenduru/sd-webui-tunnels.git /workspace/stable-diffusion-webui/extensions/sd-webui-tunnels
 RUN git clone https://github.com/etherealxx/batchlinks-webui.git /workspace/stable-diffusion-webui/extensions/batchlinks-webui
 RUN git clone https://github.com/canisminor1990/sd-web-ui-kitchen-theme.git /workspace/stable-diffusion-webui/extensions/sd-web-ui-kitchen-theme
+RUN git clone https://github.com/LonicaMewinsky/gif2gif.git /workspace/stable-diffusion-webui/extensions/gif2gif
+RUN git clone https://github.com/rifeWithKaiju/model_preset_manager.git /workspace/stable-diffusion-webui/extensions/model_preset_manager
+RUN git clone https://github.com/butaixianran/Stable-Diffusion-Webui-Civitai-Helper.git	/workspace/stable-diffusion-webui/extensions/Stable-Diffusion-Webui-Civitai-Helper
+#RUN git clone  /workspace/stable-diffusion-webui/extensions/
 
 # RUN df -h ; sudo du -shc /* 2>/dev/null  | sort -h  | grep G || true
 # RUN bash /workspace/downloader-lora.sh

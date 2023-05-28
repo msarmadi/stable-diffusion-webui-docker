@@ -39,14 +39,14 @@ ADD downloader*.sh /workspace/
 # RUN df -h ; sudo du -shc /* 2>/dev/null  | sort -h  | grep G || true
 # RUN bash /workspace/downloader-lora.sh
 # RUN bash /workspace/downloader-pt.sh
-# RUN python -m venv /workspace/venv
-# ENV PATH="/workspace/venv/bin:$PATH"
+RUN python -m venv /workspace/venv
+ENV PATH="/workspace/venv/bin:$PATH"
 
-# RUN mv /workspace/stable-diffusion-webui /stable-diffusion-webui
-# RUN mv /workspace/venv /venv
+RUN mv /workspace/stable-diffusion-webui /stable-diffusion-webui
+RUN mv /workspace/venv /venv
 
-# RUN pip install -U jupyterlab ipywidgets jupyter-archive gdown
-# RUN jupyter nbextension enable --py widgetsnbextension
+RUN pip install -U jupyterlab ipywidgets jupyter-archive gdown
+RUN jupyter nbextension enable --py widgetsnbextension
 
 ## TODO: check if things are not available, try to add an install as script or give hint in the console that the bigger image should be used
 ADD relauncher.py /stable-diffusion-webui/
